@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <div class="form">
+    <form action="/anotherServlet" onsubmit="validateForm()" method="post" id="form">
+        <label for="id">Numero:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Submit"><br>
+        <label id="validation"></label>
+    </form>
+    </div>
+<script>
+    function validateForm() {
+        let id = document.getElementById("id").value;
+        let message = "";
+        if (isNaN(id)) {
+            form = document.getElementById("form");
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+            }
+            message = "Debe ingresar un numero";
+            document.getElementById("validation").innerHTML = message;
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

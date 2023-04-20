@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <h:form id="guess_form">
+        <p:outputLabel value="#{guessBean.number}" style="display:none"></p:outputLabel>
+
+        <p:inputText id="guessedNumber"></p:inputText>
+
+        <p:outputLabel value="#{guessBean.guesses}"></p:outputLabel>
+
+        <p:outputLabel value="#{guessBean.gameState}"></p:outputLabel>
+
+        <p:outputLabel value="#{guessBean.prize}"></p:outputLabel>
+
+        <p:commandButton value="Guess" update="guess_form" action="#{guessBean.guess(guessedNumber)}"></p:commandButton>
+
+        <p:commandButton value="Restart" update="guess_form" action="#{guessBean.restart}"></p:commandButton>
+    </h:form>
+</h:body>
+</html>
