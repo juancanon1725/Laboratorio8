@@ -5,19 +5,23 @@
 <h:head></h:head>
 <h:body>
     <h:form id="guess_form">
-        <p:outputLabel value="#{guessBean.number}" style="display:none"></p:outputLabel>
+        <h:outputLabel style="display: none;"  value="#{BackingBean.getGuessNumber()}" />
+        <br />
 
-        <p:inputText id="guessedNumber"></p:inputText>
+        <h:inputText type="text" binding="#{input}" />
+        <br />
+        <h:outputLabel value="#{BackingBean.getTries()}"/>
+        <br />
+        <h:outputLabel value="#{BackingBean.getstate()}"/>
+        <br />
+        <h:outputLabel value="#{BackingBean.getAccumulativePrice()}"/>
+        <br />
+        <h:commandButton value="Send" update="guess_form"
+                         actionListener="#{BackingBean.guess(input.value)}"/>
+        <hr />
+        <h:commandButton value="Restart" update="guess_form"
+                         actionListener="#{BackingBean.restart()}"/>
 
-        <p:outputLabel value="#{guessBean.guesses}"></p:outputLabel>
-
-        <p:outputLabel value="#{guessBean.gameState}"></p:outputLabel>
-
-        <p:outputLabel value="#{guessBean.prize}"></p:outputLabel>
-
-        <p:commandButton value="Guess" update="guess_form" action="#{guessBean.guess(guessedNumber)}"></p:commandButton>
-
-        <p:commandButton value="Restart" update="guess_form" action="#{guessBean.restart}"></p:commandButton>
     </h:form>
 </h:body>
 </html>
