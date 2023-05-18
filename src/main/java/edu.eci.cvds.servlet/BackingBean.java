@@ -1,11 +1,14 @@
-package  edu.eci.cvds.calculator;
+package edu.eci.cvds.servlet;
+
+import org.springframework.stereotype.Component;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ApplicationScoped;
 
+@Component
 @ManagedBean(name = "BackingBean")
-@ApplicationScoped
+@SessionScoped
 public class BackingBean {
 
     private int guessNumber = (int)Math.floor(Math.random()*(100-0+1)+0);
