@@ -14,6 +14,17 @@ correctamente se traen las dependencias del *pom* del laboratorio 5 que fueran n
 
 Dentro de la clase bean.java se debe añadir la etiqueta @Component. Esto para que al momento de ejecutar el main del proyecto pueda cargar esta clase en spring-boot.
 
-![image](https://github.com/juancanon1725/Laboratorio8/assets/98672541/fcfea28a-e936-490a-bab9-103c793faa80)
+![image](https://github.com/juancanon1725/Laboratorio8/assets/98672541/57439de0-e052-470f-9db8-eeb349508b8f)
 
 Al ejecutar el main con el comando `mvn spring-boot:run` e ingresando a *localhost:8080/guess.xhtml* podremos jugar al GuessBean del laboratorio 5
+
+
+Finalmente, para la página de bienvenida, creamos la clase *UserBean* donde podremos almacenar el nombre de la persona que quiera jugar
+
+![image](https://github.com/juancanon1725/Laboratorio8/assets/98672541/b18e980f-1a47-48ad-9a18-47991720512a)
+
+Creamos un *welcome.xhtml* que reciba el nombre de la persona
+
+Accedemos a *localhost:8080/welcome-xhtml*
+
+Y si le damos al botón, nos redirije al juego.
