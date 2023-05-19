@@ -13,6 +13,7 @@ correctamente se traen las dependencias del *pom* del laboratorio 5 que fueran n
 
 
 Dentro de la clase bean.java se debe añadir la etiqueta @Component. Esto para que al momento de ejecutar el main del proyecto pueda cargar esta clase en spring-boot.
+
 ![image](https://github.com/juancanon1725/Laboratorio8/assets/98672541/fcfea28a-e936-490a-bab9-103c793faa80)
 
 Al ejecutar el main con el comando `mvn spring-boot:run` e ingresando a *localhost:8080/guess.xhtml* podremos jugar al GuessBean del laboratorio 5
